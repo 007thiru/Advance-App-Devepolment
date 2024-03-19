@@ -1,0 +1,408 @@
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root{
+    --dark-blue:#37638E;
+    --light-blue:#DFEEF1;
+    --orange:#E9A47D;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1{
+    font-weight: 400;
+    color: var(--dark-blue);
+    font-size: 2.7vh;
+  }
+
+  h3{
+    font-weight: 400;
+    color: var(--dark-blue);
+    margin: 0.5rem 0;
+  }
+
+  .center_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .practice_btn{
+    margin-top: 1rem;
+    border: none;
+    background: transparent;
+  }
+
+  .practice_btn a{
+    text-decoration: none;
+    color: var(--orange);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .information{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+  }
+
+  .information_container{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  ul{list-style: none;}
+  ul li a{text-decoration: none;}
+
+  button a{
+    text-decoration: none;
+    color: white;
+  }
+
+  nav{
+    height: 70px;
+    width: 100vw;
+    position: relative;
+  }
+
+  .logo{
+    position: absolute;
+    top: -20px;
+    left: 10%;
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--orange);
+    border-radius: 50%;
+    color: var(--dark-blue);
+  }
+
+  .menu_list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 75px;
+    background-color: var(--light-blue);
+    padding-right: 2rem;
+  }
+
+  .menu_list a{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--dark-blue);
+    margin: 0 20px;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  .menu_list a:hover{
+    color: var(--orange);
+  }
+
+  .menu_list a:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--orange);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  .menu_list a:hover::after{
+    animation: effect;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes effect{
+    0%{
+      opacity: 0;
+      bottom:0;
+    }
+    50%{
+      opacity: 0.5;
+      bottom:-4px;
+    }
+    100%{
+      opacity: 1;
+      bottom:-6px;
+    }
+  }
+
+  .menu_list ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+  }
+
+  .menu_list ul li a{
+    display: block;
+  }
+
+  .menu_list .dropdown{
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    background-color: var(--light-blue);
+    width: 200px;
+  }
+
+  .dropdown a{
+    margin: 10px;
+    width: fit-content;
+  }
+
+  .menu_list ul li:hover .dropdown{
+    display: flex;
+  }
+
+  #container{
+    height: 70vh;
+    width: 100%;
+    background-image: url(../Images/pexels-katrin-bolovtsova-7113344.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  #container .container_text{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    transform: translateX(-60%);
+    max-width: 350px;
+    animation: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+
+  .container_text button{
+    background-color: var(--orange);
+    padding: 10px 20px;
+    border-radius: 18px;
+    margin-top: 10px;
+    border: none;
+  }
+
+  .container_text button a{
+    font-size: 20px;
+  }
+
+  .information_container .info_card{
+    width: 25%;
+    text-align: center;
+  }
+
+  .info_card .icon{
+    color: var(--light-blue);
+    border: solid 1px var(--dark-blue);
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 4vh;
+  }
+
+   #teachers_container{
+    height: 30vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  } 
+
+  #teachers_container .illustration{
+    height: 90%;
+    width: 66%;
+    max-width: 800px;
+    background: url(../Images/illustration.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  #teachers_container .teachers_text{
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+
+  .teachers_text h1{
+    margin-bottom: 1rem;
+  }
+
+  .information_container .price_card{
+    border: solid 1px #eee;
+    width: 30vw;
+    max-width: 350px;
+    margin: 1rem;
+    position: relative;
+  }
+
+  .price_card h2{
+    width: 100%;
+    color: white;
+    font-weight: 300;
+    padding: 5px 0;
+  }
+
+  .price_card ul{
+    margin-top: 3rem;
+  }
+
+  .price_card button{
+    border: none;
+    background-color: transparent;
+    padding: 10px 20px;
+    margin: 1rem 0;
+    outline: none;
+  }
+
+  #class_plan h2,
+  #class_plan button{
+    background-color: #e99a7d;
+  }
+
+  #class_plan h2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background-color: #fadece;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    z-index: -1;
+  }
+
+  #monthly_plan h2,
+  #monthly_plan button{
+    background-color: #516c59;
+  }
+
+  #monthly_plan h2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background-color: #d9ecdf;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    z-index: -1;
+  }
+
+  #yearly_plan h2,
+  #yearly_plan button{
+    background-color: #37638e;
+  }
+
+  #yearly_plan h2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background-color: #d0e3f5;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    z-index: -1;
+  }
+
+  #subscribe{
+    height: 30vh;
+    width: 100%;
+    background-color: var(--orange);
+  }
+
+  #subscribe img{
+    height: 100px;
+  }
+
+  #subscribe p{
+    width: 400px;
+    text-align: center;
+    font-size: 1.7vh;
+    color: white;
+    margin: 1rem;
+  }
+
+  #subscribe form{
+    width: 500px;
+    height: 40px;
+    display: flex;
+  }
+
+  form input{
+    height: 100%;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding-left: 1rem;
+  }
+
+  form button{
+    height: 100%;
+    width: 30%;
+    border: none;
+    background-color: var(--dark-blue);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  #foot{
+    background-color: var(--dark-blue);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  #foot .foot_col{
+    margin: 1rem 2rem;
+  }
+
+  .foot_col a{
+    color: var(--light-blue);
+  }
+
+  #foot .social{
+    display: flex;
+  }
+
+  #foot .social .fab{
+    font-size: 1.5rem;
+    margin: 0 10px; 
+  }
+
+ 
+  

@@ -1,0 +1,37 @@
+.navbar {
+    background-color: #DFEEF1;
+    color: black;
+    padding: 10px 20px;
+    display: flex; /* Add flex display */
+    justify-content: space-between; /* Align items to the edges */
+    
+  }
+  
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-list li {
+    display: inline;
+    margin-right: 40px; /* Adjust the margin-right to add more space */
+  }
+  
+  .navbar-list li:last-child {
+    margin-right: 20px; /* Remove margin-right for the last item */
+  }
+  
+  .navbar-list li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navbar-list li a:hover {
+    color: #37638E; /* Change color on hover if needed */
+  }
+  
